@@ -1,7 +1,7 @@
 <template>
   <section class="wrapper2"> 
     <div class="wrapper">
-      <h1 class="heading">Smart Data X E-revolution_India</h1>
+      <h1 class="heading"> E-revolution_India</h1>
       <div class="grid">
         <div class="card" v-for="(item, index) in icons" :key="index">
           <component
