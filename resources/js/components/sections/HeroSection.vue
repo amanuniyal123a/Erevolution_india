@@ -23,38 +23,38 @@
       <div class="hero-image">
         <img :src="slides[currentSlide].image" :alt="slides[currentSlide].title" />
       </div>
+    </div>
 
-      <!-- Tablist MOVED here -->
-      <div class="tablist">
-        <span
-          v-for="(slide, index) in slides"
-          :key="'dot-' + index"
-          class="dot"
-          :class="{ active: index === currentSlide }"
-          @click="goToSlide(index)"
-        ></span>
-      </div>
+    <!-- Tablist (outside hero-inner for better centering) -->
+    <div class="tablist">
+      <span
+        v-for="(slide, index) in slides"
+        :key="'dot-' + index"
+        class="dot"
+        :class="{ active: index === currentSlide }"
+        @click="goToSlide(index)"
+      ></span>
     </div>
   </section>
 </template>
 
-
-
 <script setup>
 import { ref, onMounted } from 'vue'
+
 const slides = [
   {
     title: 'Welcome to Erevolution India',
-    subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    subtitle:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image: new URL('@src/assets/hero-image.jpg', import.meta.url).href,
   },
   {
     title: 'Innovate with Us',
-    subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    subtitle:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image: new URL('@src/assets/hero-img.jpg', import.meta.url).href,
   },
 ]
-
 
 const currentSlide = ref(0)
 const sliderRef = ref(null)
@@ -110,3 +110,7 @@ onMounted(() => {
   setInterval(nextSlide, 5000)
 })
 </script>
+
+<style lang="scss" scoped>
+
+</style>
