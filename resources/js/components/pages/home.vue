@@ -5,6 +5,7 @@
     <Testimonial /> 
     <Showcase /> 
     <Services />
+    <Industries />
 
      
   </MainLayout>
@@ -17,4 +18,5 @@ import ServiceStats from '@/components/ui/ServiceStats.vue'
 import Testimonial from '@/components/sections/TestimonialSlider.vue'
 import Showcase from '@/components/sections/Showcase.vue'
 import Services from '@/components/sections/Services.vue'
+import Industries from '@/components/sections/Industries.vue'
 </script>
