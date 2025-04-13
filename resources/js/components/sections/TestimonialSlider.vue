@@ -25,8 +25,11 @@
           <div class="card">
             <img :src="testimonial.image" alt="Photo" />
             <p>{{ testimonial.text }}</p>
+            <div>
+           
             <h6>{{ testimonial.name }}</h6>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -46,12 +49,12 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue';
 const localHeroImage = new URL('@src/assets/hero-img.jpg', import.meta.url).href;
 const testimonials = [
-  { name: 'Christopher Bradford', text: 'The developers and designers are capable of learning new skills very quickly...', image: localHeroImage },
-  { name: 'Peter Murray', text: 'The team impressed us with their deep understanding of our project...', image: localHeroImage },
-  { name: 'Jay Ackerman', text: 'smartData’s expertise extended our partnership from just stabilising...', image: localHeroImage },
-  { name: 'Another Person', text: 'Another testimonial goes here...', image: localHeroImage },
-  { name: 'Fifth Person', text: 'Fifth testimonial sample...', image: localHeroImage},
-  { name: 'Sixth Guy', text: 'Sixth testimonial sample...', image: localHeroImage },
+  { name: 'Ayesha Verma', text: 'Erevolution India understood our startup vision from day one. Their approach was modern, collaborative, and incredibly efficient',image: new URL('@src/assets/AyeshaVerma.jpeg', import.meta.url).href },
+  { name: 'Rahul Mehra', text: 'We needed a reliable partner for our AI backend — Erevolution India nailed it. Quick turnaround, transparent communication, and smart solutions.', image: new URL('@src/assets/RahulMehra.jpeg', import.meta.url).href },
+  { name: 'Neha Sinha', text: 'The team delivered more than we expected. The design was clean, the performance was sharp, and the support was spot on.', image: new URL('@src/assets/NehaSinha.png', import.meta.url).href },
+  { name: 'James R. Peterson', text: 'Erevolution India is a rising star in IT services. Their fresh energy and deep tech skills make them a great partner for fast-paced projects', image: new URL('@src/assets/Peterson.png', import.meta.url).href },
+  { name: 'Sneha Iyer', text: 'As a growing eCommerce startup, we needed scalable tech. Erevolution India delivered exactly what we needed — and then some.', image: new URL('@src/assets/SnehaIyer.jpeg', import.meta.url).href},
+  { name: 'Arjun Kapoor', text: 'The collaboration was smooth and productive. They handled our AI integration with a deep understanding of business needs.', image: new URL('@src/assets/ArjunKapoor.jpeg', import.meta.url).href },
 ];
 
 const currentIndex = ref(0);

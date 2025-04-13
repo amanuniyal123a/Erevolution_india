@@ -1,12 +1,13 @@
 <template>
   <section class="leadership-section">
-    <div class="container">
+    <div class="container2">
+      <div class="container">
       <div class="content">
         <h2><span class="highlight">Leadership</span></h2>
-        <p>
-          Our team members have over 25 years of experience. We have an extensive portfolio
-          of working with different companies and projects from various parts of the world.
-        </p>
+          <p>
+          Though Erevolution India is a young venture, our core team brings rich expertise across diverse technologies. With a passion for innovation and client success, we’ve already contributed to impactful solutions across education, e-commerce, and logistics domains.
+          </p>
+
 
         <div class="dots">
           <span
@@ -36,6 +37,7 @@
         </div>
       </div>
     </div>
+  </div>
   </section>
 </template>
 
@@ -49,30 +51,30 @@ const startX = ref(0);
 const visibleSlides = 3;
 const leaders = [
   {
-    name: 'Vishal Sagar',
-    title: 'Vice President Business Development',
-    image: localServiceImage,
+    name: "Karan Batra",
+    title: "Director of Strategy",
+    image: new URL('@src/assets/KaranBatra.jpeg', import.meta.url).href,
+    bio: "Karan aligns business goals with tech innovation, ensuring long-term growth and sustainable digital strategies.",
   },
   {
-    name: 'Vivek Sharma',
-    title: 'Vice President Operations',
-    image: localServiceImage,
+    name: "Mehul Joshi",
+    title: "Head of Engineering",
+    image: new URL('@src/assets/MehulJoshi.jpeg', import.meta.url).href,
+    bio: "Mehul leads the development team, driving scalable architecture and high-performance solutions across projects.",
+  }, 
+  {
+    name: "Rohan Chhabra",
+    title: "Lead AI & Infrastructure",
+    image: new URL('@src/assets/RohanChhabra.jpg', import.meta.url).href,
+    bio: "Rohan spearheads AI solutions and backend infrastructure, shaping our future-ready and intelligent platforms.",
   },
   {
-    name: 'Ajay Tewari',
-    title: 'Global CEO',
-    image: localServiceImage,
+    name: "Karan Batra",
+    title: "Director of Strategy",
+    image: new URL('@src/assets/KaranBatra.jpeg', import.meta.url).href,
+    bio: "Karan aligns business goals with tech innovation, ensuring long-term growth and sustainable digital strategies.",
   },
-  {
-    name: 'Anita Kapoor',
-    title: 'Chief Marketing Officer',
-    image: localServiceImage,
-  },
-  {
-    name: 'Rahul Verma',
-    title: 'Chief Technical Officer',
-    image: localServiceImage,
-  },
+ 
 ];
 
 const totalSlides = computed(() => Math.ceil(leaders.length / visibleSlides));

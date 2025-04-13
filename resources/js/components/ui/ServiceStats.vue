@@ -3,8 +3,8 @@
     <div class="container">
       <div class="stats-container">
         <div class="stat-box" v-for="(stat, index) in animatedStats" :key="index">
-          <h2>{{ stat.display }}+</h2>
-          <p>{{ stat.label }}</p>
+          <h2>{{ stat.display }}+ {{ stat.kbz }} </h2>
+          <p>{{ stat.label }} </p>
         </div>
       </div>
     </div>
@@ -16,10 +16,10 @@
 import { ref, onMounted } from 'vue'
 
 const rawStats = [
-  { value: 25, label: 'Years of Global Experience' },
-  { value: 7, label: 'Geographical Locations' },
-  { value: 1000, label: 'Employees' },
-  { value: 10000, label: 'Projects Successfully Delivered' },
+  { value: 10, label: '🚀 Projects Delivered' },
+  { value: 2, label: '🌍 Locations Reached' },
+  { value: 10, label: '👥 Team Size' },
+  { value: 5, label: '⏳ Experience',kbz:"Years" },
 ]
 
 const animatedStats = ref(rawStats.map(stat => ({

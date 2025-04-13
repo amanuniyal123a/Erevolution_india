@@ -13,7 +13,7 @@
             <h1>{{ slide.title }}</h1>
             <p>{{ slide.subtitle }}</p>
             <div class="hero-buttons">
-              <router-link to="/" class="secondary-btn">Contact Us</router-link>
+              <router-link to="/" class="secondary-btn">Know More</router-link>
             </div>
           </div>
         </div>
@@ -43,16 +43,27 @@ import { ref, onMounted } from 'vue'
 
 const slides = [
   {
-    title: 'Welcome to Erevolution India',
-    subtitle:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    image: new URL('@src/assets/hero-image.jpg', import.meta.url).href,
+    title: 'Empowering Businesses with Cutting-Edge Technology',
+    subtitle: "At Erevolution India, we integrate innovative technology to streamline your business processes, improving efficiency and driving growth. Discover the power of digital transformation.",
+    image: new URL('@src/assets/technology.jpg', import.meta.url).href,
   },
   {
-    title: 'Innovate with Us',
+    title: 'Uncompromising Security for Your Digital Future',
     subtitle:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    image: new URL('@src/assets/hero-img.jpg', import.meta.url).href,
+      "With Erevolution India, your business’s security is our priority. We offer robust cybersecurity measures to safeguard your data and systems from evolving threats.",
+    image: new URL('@src/assets/security.jpg', import.meta.url).href,
+  },
+  {
+    title: 'Committed to Delivering Excellence',
+    subtitle:
+      "We are passionate about delivering exceptional IT solutions and building lasting partnerships. Our mission is to help businesses thrive through innovation and commitment.",
+    image: new URL('@src/assets/excellence.jpg', import.meta.url).href,
+  },
+  {
+    title: 'Smarter Solutions with Artificial Intelligence',
+    subtitle:
+      "Erevolution India brings the power of AI to growing businesses. Intelligent solutions that automate, analyze, and accelerate your digital transformation.",
+    image: new URL('@src/assets/bulb.jpg', import.meta.url).href,
   },
 ]
 

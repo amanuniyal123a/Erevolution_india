@@ -21,26 +21,25 @@
 
 
 <script setup>
-const localServiceImage = new URL('@src/assets/hero-img.jpg', import.meta.url).href;
-
+ 
 const studies = [
   {
-    title: "MU 3.5 Certification for Telemerg EHR System",
-    image:localServiceImage,
+    title: "AI Chatbot Integration for EdTech Platform",
+    image: new URL('@src/assets/aichatbot.jpeg', import.meta.url).href, 
     description:
-      "Healthcare organizations often struggle with ensuring their Electronic Health Record (EHR) systems meet evolving standards like MU 3.5 certification, with a focus on data interoperability, patient engagement, etc.",
+      "A growing EdTech startup needed to scale support. We built a smart AI chatbot with NLP capabilities, reducing ticket load by 40% while improving student engagement.",
   },
   {
-    title: "AI-Medical Imaging Request Platform",
-    image: localServiceImage,
+    title: "End-to-End E-commerce App for Local Retailer",
+    image: new URL('@src/assets/ecomm.jpeg', import.meta.url).href, 
     description:
-      "This digital platform is designed for radiologists and imaging professionals, offering a streamlined way to convert faxed imaging requests into structured digital data using advanced AI.",
+      "We helped a traditional retailer go digital by designing and developing a full-stack mobile-first e-commerce platform — from user flow to secure payment integration.",
   },
   {
-    title: "eClinicalWorks Reporting & Analytics",
-    image: localServiceImage,
+    title: "Cloud Migration & Automation for Logistics Startup",
+    image: new URL('@src/assets/Integration.jpg', import.meta.url).href,
     description:
-      "The AI-driven analytics solution helps healthcare providers improve reporting, compliance, and patient outcomes by integrating with eClinicalWorks (eCW).",
+      "To improve performance and reduce cost, we migrated their monolithic app to the cloud with CI/CD automation and scalable microservices architecture.",
   },
 ];
 </script>

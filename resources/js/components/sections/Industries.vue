@@ -19,25 +19,23 @@
 </template>
 
 <script setup>
-const localHeroImage = new URL('@src/assets/hero-img.jpg', import.meta.url).href;
-
 const industries = [
   {
-    title: 'Healthcare',
-    image: localHeroImage,
-    description: 'Erevolution India is a leader in healthcare software development, providing innovative and customized solutions to elevate patient care.',
+    title: 'Startups & Emerging Businesses',
+    image: new URL('@src/assets/business.jpeg', import.meta.url).href,
+    description: 'We partner with startups to turn ideas into products — fast, scalable, and budget-friendly solutions built for growth.',
   },
   {
-    title: 'Enterprise SaaS & PaaS',
-    image: localHeroImage,
-    description: 'At Erevolution India we believe in transforming end to end e-commerce solutions enabling efficient online transactions, start to end.',
+    title: 'E-commerce & Retail',
+    image: new URL('@src/assets/commerce.jpg', import.meta.url).href,
+    description: 'We create secure, high-performing e-commerce platforms with smart integrations, seamless UX, and real-time analytics.',
   },
   {
-    title: 'NextGen Tech – AI/ML',
-    image: localHeroImage,
-    description: 'We integrate the latest technologies like AI, NLP, and predictive analytics to create scalable and innovative solutions.',
+    title: 'AI & Automation-Driven Enterprises',
+    image: new URL('@src/assets/ai.jpg', import.meta.url).href,
+    description: 'We help forward-thinking businesses integrate AI, automation, and data intelligence to boost efficiency and innovation.',
   },
-]
+];
 </script>
 
 <style lang="scss" scoped>

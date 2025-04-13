@@ -51,48 +51,63 @@ const localServiceImage = new URL('@src/assets/hero-img.jpg', import.meta.url).h
 
 const services = [
   {
-    title: 'Software Consulting',
+    title: 'Custom Software Development',
     description:
-      'We help companies navigate tech challenges with strategic consulting, from system optimization to creative digital strategy.',
-    icon: '💡',
-    iconBg: '#FFB6C1' // Light pink
+      'From web platforms to mobile apps, we build tailored digital products aligned with your business needs.',
+    icon: '🧩',
+    iconBg: '#B5EAEA' // Soft teal
   },
   {
-    title: 'Technology Solutions',
+    title: 'AI-Powered Solutions',
     description:
-      'Enterprise-grade technology and custom app development designed to meet your business goals.',
-    icon: '🛠️',
-    iconBg: '#D8B4FE' // Soft purple
+      'We integrate AI into your workflow — whether it’s automation, analytics, or smart user experience.',
+    icon: '🧠',
+    iconBg: '#D1C4E9' // Soft lavender
   },
   {
-    title: 'AI and Data Solutions',
+    title: 'End-to-End Project Delivery',
     description:
-      'Harness AI and analytics to optimize efficiency, enhance processes, and gain a competitive edge.',
-    icon: '🤖',
-    iconBg: '#87CEEB' // Sky blue
+      'We manage full project lifecycles — from planning to deployment — ensuring on-time, quality results.',
+    icon: '📦',
+    iconBg: '#FFE0B2' // Warm beige-orange
   },
   {
-    title: 'Cloud Infrastructure',
+    title: 'Cloud & DevOps',
     description:
-      'Deploy reliable, scalable cloud infrastructure and reduce downtime with our expert solutions.',
-    icon: '☁️',
-    iconBg: '#A0E7E5' // Cyan tint
+      'Modern infrastructure setup, CI/CD pipelines, and reliable cloud services built for scalability.',
+    icon: '🚀',
+    iconBg: '#C8E6C9' // Mint green
   },
   {
-    title: 'Product Design',
+    title: 'Tech Consulting for Startups',
     description:
-      'UX-focused, beautiful and functional designs to make your product intuitive and delightful.',
-    icon: '🎨',
-    iconBg: '#FFD580' // Soft yellow-orange
+      'We guide early-stage teams with smart strategies, lean tech choices, and scalable architecture.',
+    icon: '📈',
+    iconBg: '#F8BBD0' // Soft pink
   },
   {
-    title: 'Cybersecurity',
+    title: 'UI/UX & Product Design',
     description:
-      'We protect your digital assets with best-in-class security protocols and risk mitigation strategies.',
-    icon: '🔒',
-    iconBg: '#FF9999' // Coral
+      'Clean, user-focused interfaces that help users navigate with ease and enjoy every interaction.',
+    icon: '🎯',
+    iconBg: '#FFF9C4' // Light yellow
   },
+  {
+    title: 'Data & Analytics',
+    description:
+      'Transform your raw data into actionable insights using smart visualization and performance tracking.',
+    icon: '📊',
+    iconBg: '#AED581' // Fresh green
+  },
+  {
+    title: 'Security-First Development',
+    description:
+      'We follow industry-grade security protocols from day one — no shortcuts, no compromises.',
+    icon: '🛡️',
+    iconBg: '#FFCDD2' // Soft coral red
+  }
 ];
+
 
 
 const currentIndex = ref(0);

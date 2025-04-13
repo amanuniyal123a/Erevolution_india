@@ -8,8 +8,9 @@
     <Industries /> 
     <CaseStudies />
     <LeadershipSlider />
+    <!-- <Products /> -->
 
-     
+    
   </MainLayout>
 </template>
 
@@ -23,4 +24,5 @@ import Services from '@/components/sections/Services.vue'
 import Industries from '@/components/sections/Industries.vue'
 import CaseStudies from '@/components/sections/CaseStudies.vue' 
 import LeadershipSlider from '@/components/sections/LeadershipSlider.vue'
+// import Products from '@/components/sections/Products.vue'
 </script>
