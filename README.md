@@ -162,4 +162,4 @@ Serves as proof of competence and thought leadership.
 
 Helps humanize the brand by showcasing the people behind it.
 
-Includes names, designations, and brief bios, possibly with images, all displayed in a clean slider layout.
+Includes names, designations, and brief bios, possibly with images, all displayed in a clean slider layout. 
