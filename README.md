@@ -17,8 +17,6 @@ npm run dev
 
  3. Serve Laravel 
  php artisan serve
- 
-
 
 ## Features
 
