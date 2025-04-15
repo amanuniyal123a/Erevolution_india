@@ -5,6 +5,20 @@ Erevolution India is a modern application built using Frontend in **Vue.js** and
 This project follows a modular structure to ensure maintainability, scalability, and flexibility for future enhancements.
 
 ---
+## Commands to run the project
+1.  Clone the Project
+git clone https://github.com/amanuniyal123a/Erevolution_India.git
+cd Erevolution_India
+
+2.  Install Node.js Dependencies for Vue 3 Frontend
+
+npm install
+npm run dev 
+
+ 3. Serve Laravel 
+ php artisan serve
+ 
+
 
 ## Features
 
@@ -18,39 +32,6 @@ This project follows a modular structure to ensure maintainability, scalability,
 ## Project Frontend Structure
 
 The frontend is structured to separate concerns and organize files for better scalability. Here's an overview of the directory structure:
-
-resources/
-├── js/
-│   ├── components/
-│   │   ├── layouts/
-│   │   │   ├── Footer.vue
-│   │   │   ├── Header.vue
-│   │   │   └── MainLayout.vue
-│   │   ├── pages/
-│   │   │   └── home.vue
-│   │   ├── sections/
-│   │   │   ├── CaseStudies.vue
-│   │   │   ├── HeroSection.vue
-│   │   │   ├── Industries.vue
-│   │   │   ├── LeadershipSlider.vue
-│   │   │   ├── Products.vue
-│   │   │   ├── Services.vue
-│   │   │   ├── Showcase.vue
-│   │   │   └── TestimonialSlider.vue
-│   │   └── ui/
-│   │       └── ServiceStats.vue
-│   ├── App.vue
-│   ├── ExampleComponent.vue
-│   ├── router/
-│   │   └── index.js
-│   ├── app.js
-│   └── bootstrap.js
-├── sass/
-│   ├── _variables.scss
-│   └── app.scss  
-
-
-
 This is a Vue.js based frontend project with a focus on reusable components, layouts, and sections. Sass is used for styling.
 
 ### Key Folders and Files:
