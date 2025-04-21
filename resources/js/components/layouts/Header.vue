@@ -12,10 +12,10 @@
                 </button>
       
       <nav :class="['nav', { 'is-open': isMenuOpen }]">
-        <a href="#" class="nav-link">Home</a>
+        <router-link to="/" class="nav-link">Home</router-link>
+        <router-link to="/Contact-us" class="nav-link">Contact</router-link> 
         <a href="#" class="nav-link">About</a>
-        <a href="#" class="nav-link">Services</a>
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link">Services</a> 
       </nav>
       <button class="cta-btn">Get Started</button>
     </div>
