@@ -1,0 +1,15 @@
+ 
+$primary-color: #eaeef3;
+$accent-color: #1f2937;
+$back:linear-gradient(to right, #424748, #0d3667);
+
+$front:linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+
+
+.container {
+    font-family: 'Inter', sans-serif;
+    background-color: $back ; 
+    color: $primary-color;
+    user-select: none; // ← This disables text selection
+  }
