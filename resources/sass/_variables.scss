@@ -1,7 +1,42 @@
-// Body
-$body-bg: #f8fafc;
+// Color Palette
+$primary-color: #eaeef3;
+$accent-color: #1f2937;
+$primary-bg: linear-gradient(to right, #424748, #0d3667);
+$secondary-bg: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+$dark-bg: #08141E;
+$light-bg: #1f1f1f;
+
+// Brand Colors
+$brand-green: #26d54c;
+$brand-teal: #0da5aef5;
+$brand-purple: #731f76;
+$brand-red: #e63946;
+$brand-gold: #deb444;
+$brand-burlywood: burlywood;
+
+// Text Colors
+$text-white: #ffffff;
+$text-light: #eaeef3;
+$text-gray: #ccc;
+$text-dark: #1f2937;
+
+// Spacing
+$container-max-width: 1200px;
+$container-wide: 1623px;
+$section-padding: 3rem 1rem;
+$border-radius: 8px;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-primary: 'Inter', sans-serif;
+$font-family-secondary: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1200px;
+
+// Transitions
+$transition-fast: 0.3s ease;
+$transition-slow: 0.5s ease;

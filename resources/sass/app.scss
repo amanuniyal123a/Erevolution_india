@@ -1,174 +1,14 @@
+// Variables - using namespace to avoid conflicts
+@use 'variables' as vars;
+
+// Bootstrap - using namespace to avoid conflicts
+@use 'bootstrap/scss/bootstrap' as bootstrap;
+
 // Fonts
 @import url('https://fonts.bunny.net/css?family=Nunito');
 
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import 'bootstrap/scss/bootstrap';
-
-
- 
-$primary-color: #eaeef3;
-$accent-color: #1f2937;
-$back:linear-gradient(to right, #424748, #0d3667);
-
-$front:linear-gradient(to right, #0f2027, #203a43, #2c5364);
-
-
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: $back ; 
-  color: $primary-color;
-  user-select: none; // ← This disables text selection
-}
-.site-header {
-    background-color: #08141E; // Light Gray
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-  
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: #26d54c; // Sky Blue Accent
-      text-decoration: none;
-    }
-  
-    .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
-      background: none;
-      border: none;
-      color: #1F2937;
-      cursor: pointer;
-    }
-  
-    .nav {
-      display: flex;
-      gap: 1.5rem;
-  
-      .nav-link {
-        color: #fff; // Cool Gray
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-  
-        &:hover {
-          color: #0da5aef5; // Emerald Hover
-        }
-      }
-    }
-  
-    .cta-btn {
-      background-color: #0da5aef5; // Emerald
-      color: white;
-      border: none;
-      padding: 0.5rem 1.2rem;
-      border-radius: 0.375rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      
-      &:hover {
-        color: white; /* or any color you want */
-        background-color: #731f76; /* or any hover background */
-        border-radius: 6px;
-         
-      }
-    }
-    @media (max-width: 768px) {
-        .menu-toggle {
-          display: block;
-          color: #e2e8f1;
-        }
-      
-        .nav {
-          overflow: hidden;
-          max-height: 0;
-          opacity: 0;
-          transition: all 0.3s ease;
-          width: 100%;
-          flex-direction: column;
-          margin-top: 0;
-      
-          &.is-open {
-            max-height: 500px; // enough to show all links
-            opacity: 1;
-            margin-top: 1rem;
-          }
-      
-          .nav-link {
-            padding: 0.5rem 0;
-          }
-        }
-      
-        .cta-btn {
-          margin:auto;
-          width: 100%;
-          margin-top: 20px;
-          border: none;
-          font-size: 2rem;
-          cursor: pointer;
-         overflow: hidden;
-          transition: color 0.3s ease, background-color 0.3s ease;
-        }
-        
-        .flexbox2 {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-        .menu-toggle {
-          background-color: transparent;
-          border: none;
-          font-size: 2rem;
-          cursor: pointer;
-          color:  rgba(13, 165, 174, 0.9607843137);
-          transition: color 0.3s ease, background-color 0.3s ease;
-        }
-        .menu-toggle:hover {
-          color: white; /* or any color you want */
-          background-color: #08141E; /* or any hover background */
-          border-radius: 6px;
-        }
-        // .site-header {
-        //   position: sticky;
-        //   top: 0;
-        //   z-index: 1000;
-        // }
-      }
-      
-  }
-  .logo2{
-    color: rgb(209, 168, 44);
-  }
-
-  .logo3{
-     
-    color: rgb(231, 238, 227);
-  }
-  .flexbox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
- /* app.scss */
-
- html, body {
+// Global Styles
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -176,7 +16,15 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  font-family: vars.$font-family-primary;
+  background: vars.$primary-bg;
+  color: vars.$primary-color;
+  line-height: 1.6;
+  // Removed user-select: none for better accessibility
+}
 
+// Layout
 .layout-wrapper {
   display: flex;
   flex-direction: column;
@@ -185,29 +33,198 @@ body {
 
 .main-content {
   flex: 1;
- // padding: 1rem;
 }
 
-///footer start 
+// Header Styles
+.site-header {
+  background-color: vars.$dark-bg;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  .container {
+    max-width: vars.$container-max-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: vars.$brand-green;
+    text-decoration: none;
+    transition: color vars.$transition-fast;
+    
+    &:hover {
+      color: lighten(vars.$brand-green, 10%);
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: vars.$text-white;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: vars.$border-radius;
+    transition: all vars.$transition-fast;
+    
+    &:hover {
+      background-color: rgba(vars.$brand-teal, 0.1);
+    }
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    .nav-link {
+      color: vars.$text-white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: vars.$border-radius;
+      transition: all vars.$transition-fast;
+
+      &:hover {
+        color: vars.$brand-teal;
+        background-color: rgba(vars.$brand-teal, 0.1);
+      }
+      
+      &:focus {
+        outline: 2px solid vars.$brand-teal;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  .cta-btn {
+    background-color: vars.$brand-teal;
+    color: vars.$text-white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: vars.$border-radius;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all vars.$transition-fast;
+    text-decoration: none;
+    display: inline-block;
+    
+    &:hover {
+      background-color: vars.$brand-purple;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(vars.$brand-purple, 0.3);
+    }
+    
+    &:focus {
+      outline: 2px solid vars.$text-white;
+      outline-offset: 2px;
+    }
+  }
+
+  // Mobile Responsive
+  @media (max-width: vars.$mobile) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: vars.$dark-bg;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: all vars.$transition-fast;
+      width: 100%;
+      flex-direction: column;
+      margin-top: 0;
+      padding: 0 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+      &.is-open {
+        max-height: 500px;
+        opacity: 1;
+        margin-top: 0;
+        padding: 1rem 2rem;
+      }
+
+      .nav-link {
+        padding: 0.75rem 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(vars.$text-white, 0.1);
+        
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  
+    .cta-btn {
+      margin: 1rem auto 0;
+      width: 100%;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Logo Variations
+.logo2 {
+  color: vars.$brand-gold;
+}
+
+.logo3 {
+  color: vars.$text-light;
+}
+
+// Utility Classes
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexbox2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Footer Styles
 .site-footer {
-  background-color: #08141E;
-  color: #ccc;
+  background-color: vars.$dark-bg;
+  color: vars.$text-gray;
   padding: 2rem 1rem;
   font-size: 0.875rem;
   text-align: left;
 
   a {
-    color: #ccc;
+    color: vars.$text-gray;
     text-decoration: none;
+    transition: color vars.$transition-fast;
 
     &:hover {
-      color: #fff;
+      color: vars.$text-white;
     }
   }
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: vars.$container-max-width;
   margin: 0 auto;
 }
 
@@ -225,7 +242,7 @@ body {
 .footer-col h4 {
   margin-bottom: 0.75rem;
   font-size: 1rem;
-  color: #fff;
+  color: vars.$text-white;
 }
 
 .footer-col ul {
@@ -250,8 +267,9 @@ body {
   padding-top: 1rem;
   text-align: center;
   font-size: 0.8rem;
- }
- 
+}
+
+// Hero Section
 .hero {
   padding: 6rem 1rem 4rem;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);

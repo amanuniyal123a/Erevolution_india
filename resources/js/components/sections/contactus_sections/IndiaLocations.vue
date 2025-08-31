@@ -27,7 +27,7 @@ const locations = [
     address:
       "Plot No. I-23, Sector 83, JLPL Industrial Area, Sahibzada Ajit Singh Nagar, Punjab 140306",
     phone: "+91 172 4346363",
-    image: new URL('@src/assets/AyeshaVerma.jpeg', import.meta.url).href
+    image: new URL('@src/assets/delhi.jpg', import.meta.url).href
   },
   {
     city: "Nagpur Fuji Tower",
@@ -40,7 +40,7 @@ const locations = [
     address:
       "2nd floor, Jyoti Palace, Sahastradhara Road, Uttarakhand - 248001, India (GMT+5:30)",
     phone: "+91 135 2781880",
-    image: new URL('@src/assets/dehradun.jpg', import.meta.url).href // <-- Replace here too
+    image: new URL('@src/assets/dehradun.jpeg', import.meta.url).href // <-- Replace here too
   },
 ];
 </script>
