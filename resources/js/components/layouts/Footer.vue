@@ -275,16 +275,17 @@ onUnmounted(() => {
           align-items: baseline;
           gap: 0.25rem;
           
-          .logo-primary {
-            color: vars.$brand-green;
-          }
+         .logo-primary {
+          color: #e5b031;
+          transition: color vars.$transition-fast;
+        }
           
           .logo-secondary {
             color: vars.$text-light;
           }
           
           .logo-brand {
-            color: vars.$text-white;
+            color: vars.$brand-green;
             font-weight: 600;
           }
           
